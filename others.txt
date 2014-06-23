@@ -1,0 +1,9 @@
+alternate                   installed     removed       
+bufexplorer                 installed     removed       
+closetag                    installed     removed       
+gnupg                       installed     removed       
+jinja                       installed     removed       
+matchit                     installed     removed       
+python-indent               installed     removed       
+surround                    installed     removed       
+taglist                     installed     removed       
