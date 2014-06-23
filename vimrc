@@ -155,7 +155,11 @@ set showtabline=2
 
 let g:netrw_list_hide= '\(^\|\s\s\)\zs\.\S\+,.pyc$'
 
-set rtp+=~/vimfiles/bundle/vundle
+if has("win32")
+  set rtp+=~/vimfiles/bundle/vundle
+else
+  set rtp+=~/.vim/bundle/vundle
+end
 call vundle#rc()
 
 Bundle 'jlanzarotta/bufexplorer'

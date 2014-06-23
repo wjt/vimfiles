@@ -1,25 +1,9 @@
 "set guifont=Inconsolata\ 11
-set guifont=Consolas:h10:cANSI
-map <silent> <F2> :call FontToggle()<cr>
-function! FontToggle()
-  if &guifont == "Inconsolata 8"
-    set guifont=Inconsolata\ 10
-  elseif &guifont == "Inconsolata 10"
-    set guifont=Inconsolata\ 8
-  endif
-
-  if &guifont == "monofur 8"
-    set guifont=monofur\ 10
-  elseif &guifont == "monofur 10"
-    set guifont=monofur\ 8
-  endif
-
-  if &guifont == "DejaVu Sans Mono 9"
-    set guifont=DejaVu\ Sans\ Mono\ 7
-  elseif &guifont == "DejaVu Sans Mono 7"
-    set guifont=DejaVu\ Sans\ Mono\ 9
-  endif
-endfunction
+if has("win32")
+  set guifont=Consolas:h10:cANSI
+else
+  set guifont=Inconsolata\ 9
+endif
 
 set background=dark
 let Tlist_Show_Menu = 1
