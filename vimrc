@@ -117,7 +117,7 @@ endfunction
 " without this, my beautiful lcs is sad
 set encoding=utf-8
 
-set lcs=tab:→·,trail:∙,nbsp:˽
+set lcs=tab:→·,trail:·,nbsp:˽
 set list
 
 au Bufenter *.hs compiler ghc
