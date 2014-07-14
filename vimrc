@@ -141,8 +141,6 @@ endfunction
 let g:git_diff_spawn_mode = 1
 let g:alternateRelativeFiles = 1
 
-autocmd FileType docbk,html,htmldjango,xml,xsl source $HOME/vimfiles/macros/closetag.vim
-
 set runtimepath+=~/.vim/ultisnips_rep
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -165,6 +163,7 @@ call vundle#rc()
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'sophacles/vim-bundle-mako'
+Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-surround'
 
