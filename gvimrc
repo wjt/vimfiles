@@ -11,15 +11,7 @@ let Tlist_Show_Menu = 1
 set mousemodel=popup
 
 set guioptions-=T
-"set guioptions-=m
-
-":colorscheme Tomorrow
-":colorscheme zellner
-":colorscheme torte
-":colorscheme desert
-"map <silent> <S-F5> :colorscheme torte<cr>:call FontToggle()<cr>
-:colorscheme solarized
-
+set guioptions-=m
 
 let &guicursor = &guicursor . ",a:blinkon0"
 

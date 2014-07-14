@@ -162,10 +162,11 @@ else
 end
 call vundle#rc()
 
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'sophacles/vim-bundle-mako'
 Bundle 'tpope/vim-sleuth'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-surround'
 
 :let $PATH = $PATH . ';C:/MinGW/msys/1.0/bin'
+:colorscheme solarized
