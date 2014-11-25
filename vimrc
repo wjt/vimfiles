@@ -122,7 +122,6 @@ set list
 
 au Bufenter *.hs compiler ghc
 au BufRead,BufNewFile *.hsc setfiletype haskell
-au Bufenter *.md,*.mdwn setfiletype mkd
 au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl
 
 " sigh
@@ -155,6 +154,7 @@ let g:netrw_list_hide= '\(^\|\s\s\)\zs\.\S\+,.pyc$'
 
 if has("win32")
   set rtp+=~/vimfiles/bundle/vundle
+  :let $PATH = $PATH . ';C:/MinGW/msys/1.0/bin'
 else
   set rtp+=~/.vim/bundle/vundle
 end
@@ -166,6 +166,12 @@ Bundle 'sophacles/vim-bundle-mako'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-surround'
+Bundle 'jtratner/vim-flavored-markdown'
+Bundle 'nvie/vim-flake8'
 
-:let $PATH = $PATH . ';C:/MinGW/msys/1.0/bin'
 :colorscheme solarized
+
+augroup markdown
+    au!
+    au! BufNewFile,BufRead *.md,*.markdown,*.mkd,*.mdwn setlocal filetype=ghmarkdown
+augroup END
