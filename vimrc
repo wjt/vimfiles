@@ -158,10 +158,24 @@ Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-surround'
 Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'nvie/vim-flake8'
+Bundle 'derekwyatt/vim-scala'
+
+" Cute but not useful
+" Bundle 'mpollmeier/vim-scalaConceal'
+" Bundle 'ehamberg/vim-cute-python'
+
+" Gutter colours are crap.
+" Bundle 'airblade/vim-gitgutter'
 
 :colorscheme solarized
+
 
 augroup markdown
     au!
     au! BufNewFile,BufRead *.md,*.markdown,*.mkd,*.mdwn setlocal filetype=ghmarkdown
+augroup END
+
+augroup scala
+    au!
+    au! BufNewFile,BufRead *.scala setlocal filetype=scala
 augroup END
