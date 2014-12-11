@@ -159,6 +159,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'nvie/vim-flake8'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'kien/rainbow_parentheses.vim'
 
 " Cute but not useful
 " Bundle 'mpollmeier/vim-scalaConceal'
@@ -169,7 +170,6 @@ Bundle 'derekwyatt/vim-scala'
 
 :colorscheme solarized
 
-
 augroup markdown
     au!
     au! BufNewFile,BufRead *.md,*.markdown,*.mkd,*.mdwn setlocal filetype=ghmarkdown
@@ -179,3 +179,8 @@ augroup scala
     au!
     au! BufNewFile,BufRead *.scala setlocal filetype=scala
 augroup END
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
