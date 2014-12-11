@@ -104,16 +104,6 @@ set background=dark
 
 set spelllang=en_gb
 
-"inoremap <silent> <F5> <c -O>:call SpellToggle()<cr>
-map <silent> <F5> :call SpellToggle()<cr>
-function SpellToggle()
-    if &spell == 1
-        set nospell
-    else
-        set spell
-    endif
-endfunction
-
 " without this, my beautiful lcs is sad
 set encoding=utf-8
 
