@@ -2,7 +2,7 @@
 if has("win32")
   set guifont=Consolas:h10:cANSI
 else
-  set guifont=Inconsolata\ 9
+  set guifont=Inconsolata\ 11
 endif
 
 set background=dark
