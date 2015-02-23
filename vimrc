@@ -130,12 +130,6 @@ endfunction
 let g:git_diff_spawn_mode = 1
 let g:alternateRelativeFiles = 1
 
-set runtimepath+=~/.vim/ultisnips_rep
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
 filetype indent on
 set encoding=utf-8
 set showtabline=2
@@ -160,6 +154,8 @@ Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'nvie/vim-flake8'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 
 " Cute but not useful
 " Bundle 'mpollmeier/vim-scalaConceal'
@@ -184,3 +180,9 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
