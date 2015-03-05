@@ -7,4 +7,10 @@ snippet dc "document.createElement" W
 document.createElement("${1:div}")
 endsnippet
 
+snippet fwt "function() { with(this) { ... }}"
+function() { with(this) {
+	${VISUAL}$1
+}}$0
+endsnippet
+
 # vim:ft=snippets:
