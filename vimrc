@@ -164,6 +164,9 @@ Bundle 'honza/vim-snippets'
 " Gutter colours are crap.
 " Bundle 'airblade/vim-gitgutter'
 
+if !has('gui_running')
+  let g:solarized_termcolors=256
+end
 :colorscheme solarized
 
 augroup markdown
