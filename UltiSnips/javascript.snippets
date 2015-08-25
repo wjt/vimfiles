@@ -13,4 +13,14 @@ function() { with(this) {
 }}$0
 endsnippet
 
+snippet extend "Y extends X"
+function ${1:SubClass}(${3:argument_list}) {
+	$2.call(this, $3);
+	${VISUAL}$0
+}
+
+$1.prototype = Object.create(${2:SuperClass}.prototype);
+$1.prototype.constructor = $1;
+endsnippet
+
 # vim:ft=snippets:
