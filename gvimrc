@@ -1,6 +1,9 @@
 "set guifont=Inconsolata\ 11
+let host=$HOSTNAME
 if has("win32")
   set guifont=Consolas:h10:cANSI
+elseif host == 'gelf'
+  set guifont=Monospace\ 9
 else
   set guifont=Inconsolata\ 11
 endif

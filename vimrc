@@ -89,7 +89,7 @@ set foldmethod=syntax
 map <F0> :set textwidth=80<CR>
 set pastetoggle=<F11>
 map <F12> :make<CR>
-set makeprg=i
+"set makeprg=i
 map <M-F12> :set makeprg=i\ -C\ build<CR>
 map <C-S-F12> :set makeprg=cabal\ build<CR>
 set background=dark
@@ -145,6 +145,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'nvie/vim-flake8'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
@@ -170,6 +171,13 @@ augroup scala
     au!
     au! BufNewFile,BufRead *.scala setlocal filetype=scala
 augroup END
+
+augroup coffee
+    au!
+    au! BufNewFile,BufRead *.coffee setlocal filetype=coffee
+augroup END
+
+au BufNewFile,BufRead *.jsonc        setf javascript
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
