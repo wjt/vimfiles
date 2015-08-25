@@ -33,14 +33,6 @@ if has("autocmd")
   augroup END
 endif
 
-" Set paper size from /etc/papersize if available (Debian-specific)
-if filereadable("/etc/papersize")
-  let s:papersize = matchstr(readfile('/etc/papersize', '', 1), '\p*')
-  if strlen(s:papersize)
-    exe "set printoptions+=paper:" . s:papersize
-  endif
-endif
-
 if has('gui_running')
   " Make shift-insert work like in Xterm
   map <S-Insert> <MiddleMouse>
