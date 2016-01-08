@@ -3,7 +3,7 @@ let host=$HOSTNAME
 if has("win32")
   set guifont=Consolas:h10:cANSI
 elseif host == 'gelf'
-  set guifont=Monospace\ 9
+  set guifont=Monospace\ 10
 else
   set guifont=Inconsolata\ 11
 endif
