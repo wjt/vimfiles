@@ -142,6 +142,7 @@ Bundle 'sophacles/vim-bundle-mako'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
 Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'nvie/vim-flake8'
 Bundle 'derekwyatt/vim-scala'
@@ -149,6 +150,8 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
+Bundle 'isRuslan/vim-es6'
+Bundle 'kien/ctrlp.vim'
 
 " Cute but not useful
 " Bundle 'mpollmeier/vim-scalaConceal'
@@ -178,6 +181,7 @@ augroup coffee
 augroup END
 
 au BufNewFile,BufRead *.jsonc        setf javascript
+au BufNewFile,BufRead *.es6          setf javascript
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
