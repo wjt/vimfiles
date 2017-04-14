@@ -152,6 +152,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'isRuslan/vim-es6'
 Bundle 'kien/ctrlp.vim'
+Bundle 'vim-scripts/a.vim'
 
 " Cute but not useful
 " Bundle 'mpollmeier/vim-scalaConceal'
@@ -159,6 +160,8 @@ Bundle 'kien/ctrlp.vim'
 
 " Gutter colours are crap.
 " Bundle 'airblade/vim-gitgutter'
+
+packadd! matchit
 
 if !has('gui_running')
   let g:solarized_termcolors=256
