@@ -122,6 +122,8 @@ endfunction
 let g:git_diff_spawn_mode = 1
 let g:alternateRelativeFiles = 1
 
+let g:GPGExecutable = "gpg2 --trust-model always"
+
 filetype indent on
 set encoding=utf-8
 set showtabline=2
@@ -153,6 +155,7 @@ Bundle 'honza/vim-snippets'
 Bundle 'isRuslan/vim-es6'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/a.vim'
+Bundle 'jamessan/vim-gnupg'
 
 " Cute but not useful
 " Bundle 'mpollmeier/vim-scalaConceal'
