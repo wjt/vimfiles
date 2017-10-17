@@ -39,6 +39,43 @@ if has('gui_running')
   map! <S-Insert> <MiddleMouse>
 endif
 
+" Vundle
+filetype off
+if has("win32")
+  set rtp+=~/vimfiles/bundle/Vundle.vim
+  :let $PATH = $PATH . ';C:/MinGW/msys/1.0/bin'
+else
+  set rtp+=~/.vim/bundle/Vundle.vim
+end
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" :sort i
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'ConradIrwin/vim-bracketed-paste'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'honza/vim-snippets'
+Plugin 'isRuslan/vim-es6'
+Plugin 'jamessan/vim-gnupg'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'jtratner/vim-flavored-markdown'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'nvie/vim-flake8'
+Plugin 'SirVer/ultisnips'
+Plugin 'sophacles/vim-bundle-mako'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-ragtag'
+Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/a.vim'
+
+call vundle#end()
+filetype plugin indent on
+
 set ignorecase
 set smartcase
 set autoindent
@@ -54,7 +91,6 @@ set modeline
 set hidden
 set autoread
 
-filetype plugin on
 syntax enable
 set showmatch
 set incsearch
@@ -112,41 +148,11 @@ endfunction
 let g:git_diff_spawn_mode = 1
 let g:alternateRelativeFiles = 1
 
-filetype indent on
 set encoding=utf-8
 set showtabline=2
 
 let g:netrw_list_hide= '\(^\|\s\s\)\zs\.\S\+,.pyc$'
 
-if has("win32")
-  set rtp+=~/vimfiles/bundle/vundle
-  :let $PATH = $PATH . ';C:/MinGW/msys/1.0/bin'
-else
-  set rtp+=~/.vim/bundle/vundle
-end
-call vundle#rc()
-
-" :sort i
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'ConradIrwin/vim-bracketed-paste'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'honza/vim-snippets'
-Bundle 'isRuslan/vim-es6'
-Bundle 'jamessan/vim-gnupg'
-Bundle 'jlanzarotta/bufexplorer'
-Bundle 'jtratner/vim-flavored-markdown'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'nvie/vim-flake8'
-Bundle 'SirVer/ultisnips'
-Bundle 'sophacles/vim-bundle-mako'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-sleuth'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/a.vim'
 
 " Cute but not useful
 " Bundle 'mpollmeier/vim-scalaConceal'
