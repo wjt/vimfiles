@@ -65,7 +65,7 @@ map! ^O {^M}^[O^T
 nmap <C-Tab> :A<CR>
 
 set wildmenu
-set wildignore=*o
+set wildignore=*.o
 set wildmode=list:longest
 
 set tags=tags;/
