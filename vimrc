@@ -39,7 +39,7 @@ if has('gui_running')
   map! <S-Insert> <MiddleMouse>
 endif
 
-" Vundle
+" Vundle: hub clone VundleVim/Vundle.vim $VIM/bundle/Vundle.vim
 filetype off
 if has("win32")
   set rtp+=~/vimfiles/bundle/Vundle.vim
