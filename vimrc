@@ -58,7 +58,7 @@ filetype plugin on
 syntax enable
 set showmatch
 set incsearch
-set nohlsearch
+set hlsearch
 
 map! ^O {^M}^[O^T
 
