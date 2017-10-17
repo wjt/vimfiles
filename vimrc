@@ -153,14 +153,6 @@ set showtabline=2
 
 let g:netrw_list_hide= '\(^\|\s\s\)\zs\.\S\+,.pyc$'
 
-
-" Cute but not useful
-" Bundle 'mpollmeier/vim-scalaConceal'
-" Bundle 'ehamberg/vim-cute-python'
-
-" Gutter colours are crap.
-" Bundle 'airblade/vim-gitgutter'
-
 packadd! matchit
 
 if !has('gui_running')
