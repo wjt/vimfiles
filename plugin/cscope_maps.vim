@@ -38,12 +38,12 @@ if has("cscope")
     set csto=0
 
     " add any cscope database in current directory
-    if filereadable("cscope.out")
-        cs add cscope.out  
-    " else add the database pointed to by environment variable 
-    elseif $CSCOPE_DB != ""
-        cs add $CSCOPE_DB
-    endif
+    " if filereadable("cscope.out")
+    "     cs add cscope.out  
+    " " else add the database pointed to by environment variable 
+    " elseif $CSCOPE_DB != ""
+    "     cs add $CSCOPE_DB
+    " endif
 
     " show msg when any other cscope db added
     set cscopeverbose  
@@ -98,7 +98,7 @@ if has("cscope")
     nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
 
     " Local change: reset cscope connections
-    nmap <C-\>r :!~/bin/t<CR> :cs reset<CR>
+    nmap <C-\>r :!t<CR> :cs reset<CR>
 
 
     " Using 'CTRL-spacebar' (intepreted as CTRL-@ by vim) then a search type
