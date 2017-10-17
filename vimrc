@@ -68,16 +68,12 @@ set wildmenu
 set wildignore=*o
 set wildmode=list:longest
 
-let tlist_perl_settings  = 'perl;c:constants;l:labels;s:subroutines;d:POD'
 set tags=tags;/
 
 set grepprg=grep\ -nH\ $*
 
-:nnoremap <silent> <F8> :Tlist<CR>
 :nnoremap Q gq
 
-let perl_fold = 1
-let perl_fold_blocks = 1
 set foldenable
 set foldlevel=100
 set foldopen-=search
@@ -89,9 +85,6 @@ set foldmethod=syntax
 map <F0> :set textwidth=80<CR>
 set pastetoggle=<F11>
 map <F12> :make<CR>
-"set makeprg=i
-map <M-F12> :set makeprg=i\ -C\ build<CR>
-map <C-S-F12> :set makeprg=cabal\ build<CR>
 set background=dark
 
 set spelllang=en_gb
@@ -108,9 +101,6 @@ au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl
 
 " sigh
 au BufRead,BufNewFile *.mak     set filetype=mako
-
-let g:haddock_browser = "/usr/bin/x-www-browser"
-let g:haddock_indexdir = "~/.cache/vim/"
 
 set completeopt=menu,menuone,longest
 
