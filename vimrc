@@ -143,8 +143,10 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'isRuslan/vim-es6'
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'vim-scripts/a.vim'
+Bundle 'ConradIrwin/vim-bracketed-paste'
+Bundle 'editorconfig/editorconfig-vim'
 Bundle 'jamessan/vim-gnupg'
 
 " Cute but not useful
@@ -189,3 +191,4 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+let g:GPGExecutable="gpg2"
