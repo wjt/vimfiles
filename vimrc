@@ -112,8 +112,6 @@ endfunction
 let g:git_diff_spawn_mode = 1
 let g:alternateRelativeFiles = 1
 
-let g:GPGExecutable = "gpg2 --trust-model always"
-
 filetype indent on
 set encoding=utf-8
 set showtabline=2
