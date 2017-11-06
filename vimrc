@@ -119,9 +119,9 @@ set foldmethod=syntax
 " KEY MAPPINGS
 
 map <F0> :set textwidth=80<CR>
-set pastetoggle=<F11>
-map <F12> :make<CR>
-set background=dark
+set pastetoggle=<F9>
+map <F7> :make<CR>
+"set background=light
 
 set spelllang=en_gb
 
