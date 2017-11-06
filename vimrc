@@ -128,7 +128,7 @@ set spelllang=en_gb
 " without this, my beautiful lcs is sad
 set encoding=utf-8
 
-set lcs=tab:→·,trail:·,nbsp:˽
+set lcs=tab:↦\ ,trail:·,nbsp:˽,extends:↷,precedes:↶
 set list
 
 au Bufenter *.hs compiler ghc
