@@ -175,6 +175,8 @@ augroup coffee
     au! BufNewFile,BufRead *.coffee setlocal filetype=coffee
 augroup END
 
+autocmd BufWritePost *.py call Flake8()
+
 au BufNewFile,BufRead *.jsonc        setf javascript
 au BufNewFile,BufRead *.es6          setf javascript
 
