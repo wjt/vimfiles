@@ -192,3 +192,8 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let g:GPGExecutable="gpg2"
+
+if filereadable('/.flatpak-info')
+  let g:meson_command = 'flatpak-spawn --host meson'
+  let g:meson_ninja_command = 'flatpak-spawn --host ninja'
+endif

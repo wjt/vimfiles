@@ -98,8 +98,11 @@ if has("cscope")
     nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
 
     " Local change: reset cscope connections
-    nmap <C-\>r :!t<CR> :cs reset<CR>
-
+    if filereadable('/.flatpak-info')
+      nmap <C-\>r :!flatpak-spawn --host ~/bin/t<CR> :cs reset<CR>
+    else
+      nmap <C-\>r :!t<CR> :cs reset<CR>
+    endif
 
     " Using 'CTRL-spacebar' (intepreted as CTRL-@ by vim) then a search type
     " makes the vim window split horizontally, with search result displayed in
