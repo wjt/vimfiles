@@ -4,7 +4,7 @@ else
   set guifont=Monospace\ 9
 endif
 
-set background=dark
+"set background=dark
 let Tlist_Show_Menu = 1
 
 set mousemodel=popup
