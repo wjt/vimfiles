@@ -196,4 +196,5 @@ let g:GPGExecutable="gpg2"
 if filereadable('/.flatpak-info')
   let g:meson_command = 'flatpak-spawn --host meson'
   let g:meson_ninja_command = 'flatpak-spawn --host ninja'
+  let g:flake8_cmd = 'flatpak-spawn --host flake8'
 endif
