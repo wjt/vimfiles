@@ -196,5 +196,9 @@ let g:GPGExecutable="gpg2"
 if filereadable('/.flatpak-info')
   let g:meson_command = 'flatpak-spawn --host meson'
   let g:meson_ninja_command = 'flatpak-spawn --host ninja'
-  let g:flake8_cmd = 'flatpak-spawn --host flake8'
+  " Doesn't work because vim-flake8 uses executable() to check whether this is
+  " a path to an executable binary (it's not) rather than just trying to run
+  " it.
+  " let g:flake8_cmd = 'flatpak-spawn --host flake8'
+  let g:flake8_cmd = '/home/wjt/.local/bin/flake8'
 endif
