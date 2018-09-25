@@ -200,5 +200,9 @@ if filereadable('/.flatpak-info')
   " a path to an executable binary (it's not) rather than just trying to run
   " it.
   " let g:flake8_cmd = 'flatpak-spawn --host flake8'
-  let g:flake8_cmd = '/home/wjt/.local/bin/flake8'
+  if executable('/home/wjt/.local/bin/flake8')
+    let g:flake8_cmd = '/home/wjt/.local/bin/flake8'
+  endif
+  let g:fugitive_git_executable = 'flatpak-spawn --host git'
+  set makeprg=flatpak-spawn\ --host\ make\ -C\ build
 endif
