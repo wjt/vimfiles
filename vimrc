@@ -66,6 +66,7 @@ Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'nvie/vim-flake8'
+Plugin 'rakr/vim-one'
 Plugin 'SirVer/ultisnips'
 Plugin 'sophacles/vim-bundle-mako'
 Plugin 'tpope/vim-fugitive'
@@ -156,10 +157,7 @@ let g:netrw_list_hide= '\(^\|\s\s\)\zs\.\S\+,.pyc$'
 
 packadd! matchit
 
-if !has('gui_running')
-  let g:solarized_termcolors=256
-end
-:colorscheme solarized
+colorscheme one
 
 augroup markdown
     au!
