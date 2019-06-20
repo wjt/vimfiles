@@ -190,14 +190,5 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 if filereadable('/.flatpak-info')
-  let g:meson_command = 'flatpak-spawn --host meson'
-  let g:meson_ninja_command = 'flatpak-spawn --host ninja'
-  " Doesn't work because vim-flake8 uses executable() to check whether this is
-  " a path to an executable binary (it's not) rather than just trying to run
-  " it.
-  " let g:flake8_cmd = 'flatpak-spawn --host flake8'
-  if executable('/home/wjt/.local/bin/flake8')
-    let g:flake8_cmd = '/home/wjt/.local/bin/flake8'
-  endif
-  set makeprg=flatpak-spawn\ --host\ make\ -C\ build
+  let $PATH = $HOME . '/.vim/bin:' . $PATH
 endif
