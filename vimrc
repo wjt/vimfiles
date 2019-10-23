@@ -67,10 +67,13 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'rakr/vim-one'
+Plugin 'shumphrey/fugitive-gitlab.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'sophacles/vim-bundle-mako'
+Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-ragtag'
+Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/a.vim'
@@ -189,6 +192,17 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
+
+let g:fugitive_gitlab_domains = ['https://gitlab.com', 'https://gitlab.freedesktop.org', 'https://gitlab.gnome.org', 'https://salsa.debian.org']
+
 if filereadable('/.flatpak-info')
   let $PATH = $HOME . '/.vim/bin:' . $PATH
+endif
+
+map <Leader>* :Ggrep <cword><CR>
+map gf :e <cfile><CR>
+
+if filereadable(expand('~/.vim/local.vimrc'))
+  exe 'source' expand('~/.vim/local.vimrc')
 endif

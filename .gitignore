@@ -3,3 +3,4 @@
 /.netrwhist
 /bundle/*
 !/bundle/vundle
+/local.vimrc
